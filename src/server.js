@@ -4,6 +4,7 @@ import "dotenv/config";
 
 
 import authRoutes from "./routes/auth.route.js";
+import taskRoutes from "./routes/task.route.js";
 import { connectDB } from "./lib/db.js"
 
 
@@ -18,6 +19,7 @@ const PORT = process.env.PORT;
 
 
 app.use("/api/auth", authRoutes)
+app.use("/api/task", taskRoutes)
 
 
 app.use("/api",(req, res)=>{
